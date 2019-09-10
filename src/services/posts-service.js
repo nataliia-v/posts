@@ -90,15 +90,15 @@ const posts = new PostsService();
 //     // p.comments.forEach((el)=> console.log(el))
 // ));
 
-// /// 3) Create a new Post
-// const title = "Updated title";
-// const body = "Updated body";
-
+/// 3) Create a new Post
+// const title = "Хватит";
+// const body = "Спасибо =)";
+//
 // posts.createPost(title, body).then((body)=>{
 //   console.log(body);
 // });
 
-/// 4) Update Post's information – title and body
+// / 4) Update Post's information – title and body
 // posts.updatePost(6, title, body).then((body) => {
 //   console.log(body);
 // });

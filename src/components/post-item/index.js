@@ -1,14 +1,18 @@
 import React, { Fragment } from 'react';
+import './post-item.css'
 
 function PostItem ({ post }) {
   const { title, body } = post;
   return (
       <Fragment>
-        <span>{title}</span>
-        <span>{body}</span>
-        <button>change post</button>
-        <button>add comment</button>
-        <button>delete post</button>
+        <span className='title-item'>{title}</span>
+        <p className='body-item'>{body}</p>
+        <div className='bts-flex'>
+          <button className='btn change-item'>edit a post</button>
+          <button className='btn add-comment'>add a comment</button>
+          <button className='btn delete-item'>delete a post</button>
+        </div>
+
       </Fragment>
   );
 }

@@ -5,6 +5,8 @@ import { postsLoaded } from "../../actions";
 
 import { withPostsService } from '../hoc';
 
+import './posts-list.css';
+
 class PostsList extends Component {
 
   componentDidMount() {
@@ -29,7 +31,7 @@ class PostsList extends Component {
           {
             posts.map((post) => {
               return (
-                  <li key={post.id}><PostItem post={post}/></li>
+                  <li className='post-item' key={post.id}><PostItem post={post}/></li>
               )
             })
           }

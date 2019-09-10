@@ -1,0 +1,7 @@
+.post-item {
+    padding: 10px;
+    border: 2px solid black;
+    margin-bottom: 5px;
+    background-color: rgba(132, 160, 174, 0.39);
+    /*text-align: center;*/
+}
