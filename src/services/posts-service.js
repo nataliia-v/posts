@@ -46,14 +46,12 @@ export default class PostsService {
     return res;
   }
 
-
   async createPost(title, body) {
     const bodyy = JSON.stringify({"title" : `${title}`, "body": `${body}`});
     const method = 'POST';
     const res = await this.postResource('/posts', bodyy, method);
     return res;
   }
-
 
   async getAllPosts() {
     const res = await this.getResource('/posts');
@@ -80,9 +78,9 @@ export default class PostsService {
 
 }
 
-// const posts = new PostsService();
+const posts = new PostsService();
 
-// //// 1) Display a list of allPosts
+//// 1) Display a list of allPosts
 // posts.getAllPosts().then((body) => {
 //   body.forEach((post) => console.log(post.title))
 // });

@@ -1,8 +1,9 @@
 import React from 'react';
+import PostsList from "../posts-list/posts-list";
 
-function Posts(props) {
+function Posts() {
   return (
-      <div>AllPosts MainPage</div>
+      <PostsList/>
   );
 }
 

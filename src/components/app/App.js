@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Posts } from "../pages";
+// import { Route, Switch } from 'react-router-dom';
 // import Spinner from "../spinner";
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
 
   return (
     <div className="App">
+      <Posts/>
 
     </div>
   );
