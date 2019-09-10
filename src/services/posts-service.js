@@ -91,9 +91,9 @@ const posts = new PostsService();
 // ));
 
 /// 3) Create a new Post
-// const title = "Хватит";
-// const body = "Спасибо =)";
-//
+const title = "Добавь посты";
+const body = "Так, не надо тут удалять мои посты пожалуйста, создай свои и удаляй =) без обид";
+
 // posts.createPost(title, body).then((body)=>{
 //   console.log(body);
 // });
@@ -104,7 +104,7 @@ const posts = new PostsService();
 // });
 
 /// 5) Delete a Post
-// posts.delPost(4).then((body)=> {
+// posts.delPost(8).then((body)=> {
 //   console.log(body)
 // });
 

@@ -1,6 +1,8 @@
 
 const initialState = {
-  posts: []
+  posts: [],
+  loading: true,
+  error: null
 };
 
 const reducer = (state = initialState, action) => {
@@ -9,7 +11,21 @@ const reducer = (state = initialState, action) => {
 
     case 'POSTS_LOADED':
       return {
-        posts: action.payload
+        posts: action.payload,
+        loading: false,
+        error: null
+      };
+    case 'POSTS_REQUESTED':
+      return {
+        posts: [],
+        loading: true,
+        error: null
+      };
+    case 'POSTS_ERROR':
+      return {
+        posts:[],
+        loading:false,
+        error: action.payload
       };
     default:
       return state

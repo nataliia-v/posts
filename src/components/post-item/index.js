@@ -5,7 +5,7 @@ function PostItem ({ post }) {
   const { title, body } = post;
   return (
       <Fragment>
-        <span className='title-item'>{title}</span>
+        <a href='#' className='title-item'>{title}</a>
         <p className='body-item'>{body}</p>
         <div className='bts-flex'>
           <button className='btn change-item'>edit a post</button>
