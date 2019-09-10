@@ -1,4 +1,4 @@
-export default class PostsService {
+class PostsService {
 
   _apiBase = 'https://bloggy-api.herokuapp.com';
 
@@ -11,13 +11,13 @@ export default class PostsService {
   }
 
 
-  async postResource(url, bodyy, method) {
+  async postResource(url, body, method) {
     const res = await fetch(`${this._apiBase}${url}`, {
       method: method,
       headers: {
         'Content-Type': 'application/json'
       },
-      body: bodyy
+      body
     });
     if (!res.ok) {
       throw new Error(`Could not fetch ${url}` + ` ,received ${res.status}`)
@@ -79,6 +79,8 @@ export default class PostsService {
 }
 
 const posts = new PostsService();
+
+export default posts;
 
 //// 1) Display a list of allPosts
 // posts.getAllPosts().then((body) => {

@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 import PostItem from '../post-item';
 import { connect } from 'react-redux';
-import { postsLoaded, postsRequested, postsError } from "../../actions";
-
-import { withPostsService } from '../hoc';
+import { fetchPosts } from "../../state/posts/thunks";
+import { getAllPosts, getPostsIsLoading, getPostsError } from "../../state/posts/selectors";
 
 import './posts-list.css';
 import Spinner from "../spinner";
 import ErrorIndicator from "../error-indicator";
 
-class PostsList extends Component {
+const PostsList = ({ posts }) => {
+  return (
+      <ul>
+        {
+          posts.map((post) => {
+            return (
+                <li className='post-item' key={post.id}><PostItem post={post}/></li>
+            )
+          })
+        }
+      </ul>
+  );
+};
+
+class PostsListContainer extends Component {
 
   componentDidMount() {
-    this.props.fetchPosts();
+    this.props.dispatch(fetchPosts());
   }
 
   render() {
@@ -20,53 +33,19 @@ class PostsList extends Component {
     if (loading) {
       return <Spinner/>;
     }
-
     if (error) {
       return <ErrorIndicator/>
     }
 
-    return (
-        <ul>
-          {
-            posts.map((post) => {
-              return (
-                  <li className='post-item' key={post.id}><PostItem post={post}/></li>
-              )
-            })
-          }
-        </ul>
-    );
+    return <PostsList posts={posts}/>
+
   }
 }
 
-const mapStateToProps = ({ posts, loading, error }) => {
-  return { posts, loading, error };
-};
+const mapStateToProps = state => ({
+  posts: getAllPosts(state),
+  loading: getPostsIsLoading(state),
+  error: getPostsError(state),
+});
 
-const mapDispatchToProps = (dispatch, ownProps) => {
-  // postsLoaded,
-  // postsRequested,
-  // postsError
-  const { postsService } = ownProps;
-
-  return {
-    fetchPosts: () => {
-      dispatch(postsRequested());
-      postsService.getAllPosts()
-          .then((data) => dispatch(postsLoaded(data)))
-          .catch((err) => postsError(err));
-    }
-  }
-
-};
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     postsLoaded: (newPosts) => {
-//       dispatch(postsLoaded(newPosts));
-//     }
-//
-//   };
-// };
-
-export default withPostsService()(connect(mapStateToProps, mapDispatchToProps)(PostsList));
+export default connect(mapStateToProps)(PostsListContainer);

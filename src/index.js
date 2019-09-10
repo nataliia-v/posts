@@ -5,23 +5,16 @@ import { BrowserRouter as Router } from "react-router-dom";
 
 import App from './components/app';
 import ErrorBoundry from './components/error-boundry';
-import PostsService from './services/posts-service';
-import { PostsServiceProvider } from "./components/posts-service-context/posts-service-context";
+import configureStore from './state/configureStore';
 
-import store from './store';
-
-
-const postsService = new PostsService();
-
+const store = configureStore();
 
 ReactDOM.render(
     <Provider store={store}>
       <ErrorBoundry>
-        <PostsServiceProvider value={postsService}>
-          <Router>
-            <App />
-          </Router>
-        </PostsServiceProvider>
+        <Router>
+          <App />
+        </Router>
       </ErrorBoundry>
     </Provider>
     , document.getElementById('root'));
