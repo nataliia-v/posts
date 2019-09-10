@@ -8,7 +8,11 @@ import {
   startPostSaving,
   stopPostSaving,
   savePostSuccess,
-  savePostFailed
+  savePostFailed,
+  startPostDel,
+  stopPostDel,
+  delPostSuccess,
+  delPostFailed
 } from '../actions';
 
 export const fetchPosts = () => {
@@ -42,6 +46,22 @@ export const savePost = post => {
       dispatch(savePostFailed(error));
     } finally {
       dispatch(stopPostSaving());
+    }
+  };
+};
+
+export const delPost = id => {
+
+  return async dispatch => {
+    dispatch(startPostDel());
+
+    try {
+      const data = await postsService.delPost(id);
+      dispatch(delPostSuccess(data));
+    } catch (error) {
+      dispatch(delPostFailed(error));
+    } finally {
+      dispatch(stopPostDel());
     }
   };
 };

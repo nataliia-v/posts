@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
-// import { func } from "prop-types";
 import { savePost } from '../../state/posts/thunks';
 import { getIsSavingPost} from "../../state/posts/selectors";
 
@@ -10,13 +9,6 @@ class AddPost extends Component {
     title: "tt",
     body: "tt",
   };
-
-
-  // static propTypes = {
-  //   dispatch: func.isRequired
-  // };
-
-
 
   onChangeTitle = e => {
     this.setState({
@@ -59,17 +51,16 @@ class AddPost extends Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Title</label>
-            <input onChange={this.onChangeTitle} type="text" placeholder="Title"/>
+            <input required onChange={this.onChangeTitle} type="text" placeholder="Title"/>
           </div>
 
           <div>
             <label>Text</label>
-            <input onChange={this.onChangeBody} type="text" placeholder="Enter the text here"/>
+            <input required onChange={this.onChangeBody} type="text" placeholder="Enter the text here"/>
           </div>
 
-
           <button>Add a post</button>
-          {/*onChange={this.onLabelChange}*/}
+
         </form>
     );
   }

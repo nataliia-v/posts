@@ -38,3 +38,24 @@ export const savePostFailed = error => ({
   type: "SAVE_POST_FAILED",
   payload: error
 });
+
+
+/*
+ * ---------------
+ * Delete post
+ * ---------------
+ * */
+export const startPostDel = () => ({
+  type: "START_POST_DEL"
+});
+export const stopPostDel= () => ({
+  type: "STOP_POST_DEL"
+});
+export const delPostSuccess = post => ({
+  type: "DEL_POST_SUCCESS",
+  payload: post
+});
+export const delPostFailed = error => ({
+  type: "DEL_POST_FAILED",
+  payload: error
+});

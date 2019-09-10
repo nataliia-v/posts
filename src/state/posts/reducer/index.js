@@ -3,6 +3,7 @@ const initialState = {
   data: [],
   loading: true,
   isSaving: false,
+  isDel: false,
   error: null,
 };
 
@@ -51,15 +52,31 @@ const reducer = (state = initialState, action) => {
         data: [action.payload, ...state.data]
       };
 
-    case 'REMOVE_POST':
+      /*
+ * ---------------
+ * Delete post
+ * ---------------
+ * */
+    case "START_POST_DEL":
       return {
         ...state,
-        // posts
+        isDel: true
+      };
+    case "STOP_POST_DEL":
+      return {
+        ...state,
+        isDel: false
+      };
+    case "DEL_POST_SUCCESS":
+      const idx = state.data.findIndex((post) => post.id);
+      state.data.splice(idx, 1);
+      return {
+        ...state,
+        data: state.data
       };
 
     default:
       return state
-
   }
 };
 
