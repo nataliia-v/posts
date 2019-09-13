@@ -1,5 +1,5 @@
-import OnePost from './onePost';
+import PostPage from './PostPage';
 import Posts from './posts';
 
 
-export { OnePost, Posts };
+export { PostPage, Posts };

@@ -39,11 +39,7 @@ class PostsService {
   }
 
   async createComment(postId, body) {
-    const bodyy = JSON.stringify({"postId" : `${postId}`, "body": `${body}`});
-    const method = 'POST';
-
-    const res = await this.postResource(`/comments`, bodyy, method);
-    return res;
+    return await this.postResource(`/comments`, JSON.stringify({ postId, body }), 'POST');
   }
 
   async createPost(title, body) {
@@ -55,6 +51,11 @@ class PostsService {
 
   async getAllPosts() {
     const res = await this.getResource('/posts');
+    return res;
+  }
+
+  async getAllPostsWithComments() {
+    const res = await this.getResource('/posts?_embed=comments');
     return res;
   }
 
@@ -94,7 +95,7 @@ export default posts;
 
 /// 3) Create a new Post
 const title = "Добавь посты";
-const body = "Так, не надо тут удалять мои посты пожалуйста, создай свои и удаляй =) без обид";
+// const body = "body";
 
 // posts.createPost(title, body).then((body)=>{
 //   console.log(body);
@@ -113,9 +114,9 @@ const body = "Так, не надо тут удалять мои посты по
 
 /// 6) Create a new Comment
 
-// const postId = 6;
+// const postId = 8;
 // const body = "Comment body";
-//
+// //
 // posts.createComment(postId, body).then((body)=> {
 //   console.log(body)
 // });

@@ -14,7 +14,6 @@ const reducer = (state = initialState, action) => {
     case 'START_POSTS_FETCHING':
       return {
         ...state,
-        data: [],
         loading: true,
         error: null
       };
@@ -51,6 +50,15 @@ const reducer = (state = initialState, action) => {
         ...state,
         data: [action.payload, ...state.data]
       };
+    case 'UPDATE_POST_SUCCESS':
+      return {
+        ...state,
+        data: state.data.map(post => post.id === action.payload.id ? ({
+          ...post,
+          ...action.payload
+        }) : post)
+
+      };
 
       /*
  * ---------------
@@ -68,29 +76,77 @@ const reducer = (state = initialState, action) => {
         isDel: false
       };
     case "DEL_POST_SUCCESS":
-      const idx = state.data.findIndex((post) => post.id);
-      state.data.splice(idx, 1);
+      // const idx = state.data.findIndex((post) => post.id);
+      // state.data.splice(idx, 1);
       return {
         ...state,
-        data: state.data
+        data: state.data.filter(post => post.id !== action.payload)
+      };
+
+      /*
+ * ---------------
+ * Open 1 item and comment
+ * ---------------
+ * */
+
+    case 'START_POST_FETCHING':
+      return {
+        ...state,
+        loading: true,
+        error: null
+      };
+    case 'STOP_POST_FETCHING':
+      return {
+        ...state,
+        loading: false,
+      };
+    case 'FETCH_POST_SUCCESS':
+      return {
+        ...state,
+        data: action.payload
+        // data: state.data.filter(post => post.id === action.payload)
+      };
+    case 'FETCH_POST_FAILED':
+      return {
+        ...state,
+        error: action.payload
+      };
+
+      /*
+     * Save comment
+     * */
+
+    case 'START_COMMENT_SAVING':
+      return {
+        ...state,
+        isSaving: true
+      };
+    case 'STOP_COMMENT_SAVING':
+      return {
+        ...state,
+        isSaving: false
+      };
+    case 'SAVE_COMMENT_SUCCESS':
+      return {
+        ...state,
+        data: state.data.map((post) => {
+          if (Number(post.id) === Number(action.payload.postId)){
+            return {
+              ...post,
+              comments: [
+                  action.payload,
+                  ...post.comments
+              ],
+            }
+          } else {
+            return post;
+          }
+        })
       };
 
     default:
       return state
   }
 };
-
-// const updateList = (state, postId) => {
-//   const post = state.posts.find((post) => post.id === postId);
-//   const itemIndex = state.posts.findIndex(({id}) => id === postId);
-//   const item = state.posts[itemIndex];
-//
-//   const newItem = updateItem(post, item);
-//
-//   return {
-//     ...state,
-//     posts: updateItems(state.posts, newItem, itemIndex)
-//   }
-// }
 
 export default reducer;

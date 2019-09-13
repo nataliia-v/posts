@@ -21,3 +21,12 @@ export const getIsSavingPost = createSelector(
     getPostsModuleState,
     postsState => postsState.isSaving
 );
+
+export const getPostById = createSelector(
+    getAllPosts,
+    (_, postId) => postId,
+    (allPosts, postId) => {
+
+      return allPosts.find(post => String(post.id) === String(postId))
+    }
+);

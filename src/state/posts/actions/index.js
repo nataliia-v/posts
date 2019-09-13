@@ -38,6 +38,10 @@ export const savePostFailed = error => ({
   type: "SAVE_POST_FAILED",
   payload: error
 });
+export const updatePostSuccess = post => ({
+  type: 'UPDATE_POST_SUCCESS',
+  payload: post,
+});
 
 
 /*
@@ -51,11 +55,55 @@ export const startPostDel = () => ({
 export const stopPostDel= () => ({
   type: "STOP_POST_DEL"
 });
-export const delPostSuccess = post => ({
+export const delPostSuccess = postId => ({
   type: "DEL_POST_SUCCESS",
-  payload: post
+  payload: postId
 });
 export const delPostFailed = error => ({
   type: "DEL_POST_FAILED",
   payload: error
+});
+
+/*
+* ---------------
+* Opem 1 item and comment
+* ---------------
+* */
+
+export const startPostFetching = () => ({
+  type: 'START_POST_FETCHING',
+});
+
+export const stopPostFetching = () => ({
+  type: 'STOP_POST_FETCHING',
+});
+
+export const fetchPostSuccess = postItem => ({
+  type: 'FETCH_POST_SUCCESS',
+  payload: [postItem]
+});
+
+export const fetchPostFailed = error => ({
+  type: 'FETCH_POST_FAILED',
+  payload: error
+});
+
+/*
+   * ---------------
+   * Save comment
+   * ---------------
+   * */
+
+export const startCommentSaving = () => ({
+  type: 'START_COMMENT_SAVING'
+});
+export const stopCommentSaving = () => ({
+  type: 'STOP_COMMENT_SAVING'
+});
+export const saveCommentSuccess = comment => ({
+  type: 'SAVE_COMMENT_SUCCESS',
+  payload: comment
+});
+export const saveCommentFailed = () => ({
+  type: 'SAVE_COMMENT_FAILED'
 });

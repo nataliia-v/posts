@@ -1,5 +1,5 @@
 import React from 'react';
-import PostsList from "../posts-list/posts-list";
+import PostsList from "../PostsList/PostsList";
 import AddPost from "../add-post";
 
 function Posts() {
