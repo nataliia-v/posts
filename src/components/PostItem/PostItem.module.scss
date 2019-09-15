@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$color_wave: #4b96a3;
+
+.titleItem {
+    font-weight: bold;
+    font-size: 20px;
+    width: 80%;
+
+}
+
+.bodyItem {
+    margin-bottom: 10px;
+    font-size: 15px;
+    width: 80%;
+}
+
+.bts-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+
+
+.headerPostFlex {
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-between;
+    align-items: center;
+
+    .btn {
+        margin-right: 10px;
+        padding: 5px 10px;
+        background-color: #f3f3f3;
+        border-radius: 5px;
+    }
+
+    .addComment {
+        color: white;
+        background-color: $color_wave;
+        border: 1px solid white;
+        //margin-bottom: 5px;
+    }
+}
+
+.icon {
+    width: 20px;
+    margin-right: 20px;
+
+    &:hover {
+        width: 25px;
+    }
+}
+
+
+.inputFormComment{
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.btn {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    //padding: 5px;
+}
+.flexS {
+    display: flex;
+    flex-direction: column;
+}
+
+.widthh {
+    width: 600px;
+}
+.link {
+    text-decoration: none;
+    //color: #3498db;
+    //decoration: none;
+}
+
+.link:visited
+{
+    text-decoration: none;
+    color: black;
+
+}

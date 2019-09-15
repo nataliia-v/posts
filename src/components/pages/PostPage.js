@@ -4,6 +4,8 @@ import { getPostsIsLoading, getPostById, } from "../../state/posts/selectors";
 import { delPost, updatePostThunk, fetchPostWithComments, saveComment } from '../../state/posts/thunks'
 import PostItem from "../PostItem/PostItem";
 import Spinner from "../spinner";
+import { makeStyles } from "@material-ui/core";
+import Card from "@material-ui/core/Card";
 
 function PostPage({
   match: { params: { postId } },
@@ -36,6 +38,18 @@ function PostPage({
     )
   };
 
+  const useStyles = makeStyles(() => ({
+
+    card: {
+      maxWidth: 700,
+      marginBottom: 10,
+      margin: 'auto',
+    },
+
+  }));
+
+  const classes = useStyles();
+
   if (isLoadingPost) {
     return <Spinner/>
   }
@@ -43,7 +57,11 @@ function PostPage({
   if (!isLoadingPost && !post) return <div>Not Found - 404</div>;
 
   return (
-    <PostItem post={post} onDelete={deletePost} onUpdate={updatePost} onCreateComment={createComment}/>
+
+      <Card className={classes.card} key={post.id}>
+        <PostItem post={post} onDelete={deletePost} onUpdate={updatePost} onCreateComment={createComment}/>
+      </Card>
+
   );
 }
 

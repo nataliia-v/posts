@@ -4,16 +4,15 @@
     box-sizing: border-box;
 }
 
-
-.error-indicator{
+.errorIndicator{
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
+    .icon {
+        width: 50vw;
+        margin: auto;
+    }
 }
 
-.icon {
-    width: 50vw;
-    margin: auto;
-}

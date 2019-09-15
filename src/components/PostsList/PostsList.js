@@ -8,8 +8,22 @@ import './PostsList.css';
 import Spinner from "../spinner";
 import ErrorIndicator from "../error-indicator";
 import { delPost, fetchPosts, saveComment, updatePostThunk } from "../../state/posts/thunks";
+import { makeStyles } from '@material-ui/core/styles';
+import Card from "@material-ui/core/Card";
+
+
+const useStyles = makeStyles(() => ({
+
+  card: {
+    maxWidth: 700,
+    marginBottom: 10,
+    margin: 'auto',
+  },
+
+}));
 
 const PostsList = ({ posts, onDelete, onUpdate, onCreateComment }) => {
+  const classes = useStyles();
 
   console.log(posts);
   return (
@@ -17,9 +31,9 @@ const PostsList = ({ posts, onDelete, onUpdate, onCreateComment }) => {
       {
         posts.map((post) => {
           return (
-            <li className='post-item' key={post.id}>
+              <Card className={classes.card} key={post.id}>
               <PostItem post={post} onDelete={onDelete} onUpdate={onUpdate} onCreateComment={onCreateComment}/>
-            </li>
+              </Card>
           )
         })
       }

@@ -3,11 +3,17 @@ import { connect } from "react-redux";
 import { savePost } from '../../state/posts/thunks';
 import { getIsSavingPost} from "../../state/posts/selectors";
 
+
+import styles from './addPost.module.scss'
+import TextField from '@material-ui/core/TextField';
+import Button from "@material-ui/core/Button";
+
 class AddPost extends Component {
 
   state = {
     title: "tt",
     body: "tt",
+    showPostCreation: false,
   };
 
   onChangeTitle = e => {
@@ -42,26 +48,50 @@ class AddPost extends Component {
       title: "",
       body: ""
     });
+  };
 
+  onViewComments = () => {
+    this.setState(prevState => ({
+      showPostCreation: !prevState.showPostCreation
+    }))
   };
 
   render() {
 
+    const { showPostCreation } = this.state;
+
     return (
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label>Title</label>
-            <input required onChange={this.onChangeTitle} type="text" placeholder="Title"/>
-          </div>
+        <div>
 
-          <div>
-            <label>Text</label>
-            <input required onChange={this.onChangeBody} type="text" placeholder="Enter the text here"/>
-          </div>
+          <Button onClick={ this.onViewComments } variant="outlined">
+            {showPostCreation ? 'Close' : 'Add my post'}
+          </Button>
 
-          <button>Add a post</button>
+          { showPostCreation &&
+          <form className={styles.formAddPost} noValidate autoComplete="off" onSubmit={this.handleSubmit}>
 
-        </form>
+            <TextField
+                id="outlined-name"
+                label="Title"
+                required
+                onChange={this.onChangeTitle}
+                margin="normal"
+                variant="outlined"
+            />
+            <TextField
+                id="standard-textarea"
+                label="Enter the text here"
+                placeholder="Placeholder"
+                multiline
+                onChange={this.onChangeBody}
+                margin="normal"
+            />
+            <button>Add a post</button>
+          </form>
+          }
+
+        </div>
+
     );
   }
 }

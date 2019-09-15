@@ -134,8 +134,8 @@ const reducer = (state = initialState, action) => {
             return {
               ...post,
               comments: [
-                  action.payload,
-                  ...post.comments
+                  ...post.comments,
+                action.payload
               ],
             }
           } else {

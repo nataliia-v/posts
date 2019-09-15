@@ -2,34 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f713b30b-4b53-49a4-9a33-d4634ba59d85" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/posts.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PostItem/PostItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/comment-form/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/comment/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/helpers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Main/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/PostsList/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/routes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/add-post/addPost.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/onePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/PostPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pages/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/post-item/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/post-item/post-item.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostItem/PostItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/posts-list/posts-list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/posts-list/posts-list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/posts-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/posts-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/posts/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/posts/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostItem/PostItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostItem/PostItem.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostItem/PostItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostItem/PostItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/add-post/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/add-post/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/error-indicator.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/error-indicator/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/error-indicator/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/pages/PostPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pages/PostPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/state/posts/reducer/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/posts/reducer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/posts/selectors/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/posts/selectors/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/state/posts/thunks/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/state/posts/thunks/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -43,13 +28,88 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/PostItem/PostItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="102" column="73" lean-forward="true" selection-start-line="102" selection-start-column="73" selection-end-line="102" selection-end-column="73" />
+            <state relative-caret-position="1693">
+              <caret line="125" column="33" lean-forward="true" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="33" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/add-post/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/add-post/addPost.module.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="16">
+              <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/PostsList/PostsList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="261">
+              <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/PostItem/PostItem.module.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/pages/PostPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="64" column="4" lean-forward="true" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/routes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="32">
+              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/views/PostsList/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="192">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -75,6 +135,9 @@
       <find>SAVE_POST_SUCCESS</find>
       <find>onDelete</find>
       <find>onEdi</find>
+      <find>50vw</find>
+      <find>IconButton</find>
+      <find>isviewcomments</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -95,7 +158,6 @@
         <option value="$PROJECT_DIR$/src/hoc/with-posts-service.js" />
         <option value="$PROJECT_DIR$/src/state/posts/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/components/pages/posts.js" />
-        <option value="$PROJECT_DIR$/src/components/add-post/index.js" />
         <option value="$PROJECT_DIR$/src/utils/helpers/index.js" />
         <option value="$PROJECT_DIR$/src/views/Main/index.js" />
         <option value="$PROJECT_DIR$/src/components/pages/index.js" />
@@ -109,15 +171,21 @@
         <option value="$PROJECT_DIR$/src/components/posts-list/PostsList.js" />
         <option value="$PROJECT_DIR$/src/views/PostsList/index.js" />
         <option value="$PROJECT_DIR$/src/state/posts/actions/index.js" />
-        <option value="$PROJECT_DIR$/src/components/PostsList/PostsList.css" />
-        <option value="$PROJECT_DIR$/src/components/PostItem/PostItem.css" />
-        <option value="$PROJECT_DIR$/src/components/pages/PostPage.js" />
-        <option value="$PROJECT_DIR$/src/components/PostsList/PostsList.js" />
         <option value="$PROJECT_DIR$/src/components/comment/index.js" />
         <option value="$PROJECT_DIR$/src/services/posts-service.js" />
         <option value="$PROJECT_DIR$/src/state/posts/thunks/index.js" />
         <option value="$PROJECT_DIR$/src/state/posts/reducer/index.js" />
+        <option value="$PROJECT_DIR$/src/components/PostsList/PostsList.css" />
+        <option value="$PROJECT_DIR$/src/components/PostItem/PostItem.css" />
+        <option value="$PROJECT_DIR$/src/components/error-indicator/index.js" />
+        <option value="$PROJECT_DIR$/src/components/error-indicator/error-indicator.module.scss" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/components/PostsList/PostsList.js" />
+        <option value="$PROJECT_DIR$/src/components/pages/PostPage.js" />
         <option value="$PROJECT_DIR$/src/components/PostItem/PostItem.js" />
+        <option value="$PROJECT_DIR$/src/components/PostItem/PostItem.module.scss" />
+        <option value="$PROJECT_DIR$/src/components/add-post/addPost.module.scss" />
+        <option value="$PROJECT_DIR$/src/components/add-post/index.js" />
       </list>
     </option>
   </component>
@@ -144,6 +212,11 @@
             <path>
               <item name="posts" type="b2602c69:ProjectViewProjectNode" />
               <item name="posts" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="posts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="posts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -157,7 +230,7 @@
               <item name="posts" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="comment" type="462c0819:PsiDirectoryNode" />
+              <item name="add-post" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -210,21 +283,22 @@
       <option name="presentableId" value="Default" />
       <updated>1568102109732</updated>
       <workItem from="1568102111219" duration="43642000" />
-      <workItem from="1568180454996" duration="35678000" />
+      <workItem from="1568180454996" duration="51354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79320000" />
+    <option name="totallyTimeSpent" value="94996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.16208598" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.4982382" visible="true" weight="0.4163569" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" sideWeight="0.4982382" visible="true" weight="0.3197026" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5017618" side_tool="true" weight="0.40520447" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
@@ -242,9 +316,9 @@
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.205074" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.16208598" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4982382" visible="true" weight="0.1598513" />
+      <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.4982382" visible="true" weight="0.4163569" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.5017618" side_tool="true" weight="0.40520447" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
@@ -305,16 +379,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/app/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/helpers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/app/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -364,40 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/pages/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#44#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PostsList/PostsList.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PostItem/PostItem.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/posts-service-context/posts-service-context.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -422,16 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/views/PostsList/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/comment/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -445,16 +465,6 @@
           <caret line="40" column="30" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PostsList/PostsList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -483,10 +493,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/add-post/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/PostsList/PostsList.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/state/posts/reducer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="136" column="35" lean-forward="true" selection-start-line="136" selection-start-column="35" selection-end-line="136" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/error-indicator/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/error-indicator/error-indicator.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/helpers/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/views/PostsList/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/pages/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="4" column="27" lean-forward="true" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PostsList/PostsList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="33" column="14" lean-forward="true" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="59" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -495,27 +580,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/pages/PostPage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="32" column="2" selection-start-line="32" selection-start-column="2" selection-end-line="36" selection-end-column="4" />
+        <state relative-caret-position="598">
+          <caret line="64" column="4" lean-forward="true" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/state/posts/reducer/index.js">
+    <entry file="file://$PROJECT_DIR$/src/components/PostItem/PostItem.module.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="143" column="10" lean-forward="true" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
+        <state relative-caret-position="363">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/add-post/addPost.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/PostItem/PostItem.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="102" column="73" lean-forward="true" selection-start-line="102" selection-start-column="73" selection-end-line="102" selection-end-column="73" />
+        <state relative-caret-position="1693">
+          <caret line="125" column="33" lean-forward="true" selection-start-line="125" selection-start-column="14" selection-end-line="125" selection-end-column="33" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/add-post/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
