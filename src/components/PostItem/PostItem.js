@@ -129,7 +129,7 @@ function PostItem(props) {
               </form>
               <ul className={ styles.commentsList }>
                 {
-                  post.comments.map((comment) => {
+                  post.comments && post.comments.map((comment) => {
                     return (
                         <li key={ comment.id }><Comment comment={ comment }/></li>
                     )
