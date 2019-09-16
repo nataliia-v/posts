@@ -95,7 +95,7 @@ class AddPost extends Component {
                       onChange={ this.onChangeBody }
                       margin="normal"
                   />
-                  <button className={ styles.btn }>add a post</button>
+                  <button onClick={ this.handleSubmit } className={ styles.btn }>add a post</button>
                 </form>
               </div>
             </Modal>

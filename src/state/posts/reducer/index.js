@@ -47,7 +47,7 @@ const reducer = (state = initialState, action) => {
     case 'SAVE_POST_SUCCESS':
       return {
         ...state,
-        data: [action.payload, ...state.data]
+        data: [...state.data, action.payload ]
       };
     case 'UPDATE_POST_SUCCESS':
       return {
@@ -84,7 +84,7 @@ const reducer = (state = initialState, action) => {
 
       /*
  * ---------------
- * Open 1 itemPost and comments
+ * itemPost and comments
  * ---------------
  * */
 

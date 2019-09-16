@@ -30,6 +30,7 @@ export const fetchPosts = () => {
 
     try {
       const data = await postsService.getAllPostsWithComments();
+      console.log(data);
 
       dispatch(fetchPostsSuccess(data));
     } catch (error) {
