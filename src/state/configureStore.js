@@ -8,7 +8,7 @@ const composeEnhancers = devtools || compose;
 
 export default () => {
   return createStore(
-    rootReducer,
-    composeEnhancers(applyMiddleware(thunkMiddleware))
+      rootReducer,
+      composeEnhancers(applyMiddleware(thunkMiddleware))
   );
 };

@@ -7,9 +7,8 @@ function Main() {
   return (
       <div>
         <Switch>
-          {routes}
-
-          <Redirect from="" to="/posts" />
+          { routes }
+          <Redirect from="" to="/posts"/>
         </Switch>
       </div>
   );

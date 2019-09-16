@@ -20,9 +20,6 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1),
     fontSize: 10,
   },
-  // titleItem: {
-  //   textDecoration: none,
-  // }
 }));
 
 function PostItem(props) {
@@ -77,71 +74,72 @@ function PostItem(props) {
   const classes = useStyles();
   return (
       <div>
-          <CardActionArea>
-            <CardContent>
-              { isEditMode
-                  ?
-                  (
+        <CardActionArea>
+          <CardContent>
+            { isEditMode
+                ?
+                (
+                    <div>
                       <div>
-                        <div >
-                          <input className={ styles.titleItem } type="text" value={ postTitle } onChange={ onChangeTitle }/>
-                        </div>
-                        <p >
-                          <textarea className={ styles.bodyItem } value={ postBody } onChange={ onChangeBody }/>
-                        </p>
+                        <input className={ styles.titleItem } type="text" value={ postTitle }
+                               onChange={ onChangeTitle }/>
                       </div>
-                  )
-                  : (
-                      <Link className={ styles.link } to={ postUrl }>
-                        <div>
-                          <Typography gutterBottom variant="h5" component="h2">
-                            { post.title }
-                          </Typography>
-                          <Typography variant="body2" color="textSecondary" component="p">
-                            {post.body}
-                          </Typography>
-                        </div>
+                      <p>
+                        <textarea className={ styles.bodyItem } value={ postBody } onChange={ onChangeBody }/>
+                      </p>
+                    </div>
+                )
+                : (
+                    <Link className={ styles.link } to={ postUrl }>
+                      <div>
+                        <Typography gutterBottom variant="h5" component="h2">
+                          { post.title }
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="p">
+                          { post.body }
+                        </Typography>
+                      </div>
 
-                      </Link>
-                  )
-              }
-            </CardContent>
-          </CardActionArea>
-          <CardActions className={styles.flexS}>
+                    </Link>
+                )
+            }
+          </CardContent>
+        </CardActionArea>
+        <CardActions className={ styles.flexBts }>
+          <div>
+            { isEditMode && <Button onClick={ onUpdatePost } variant="outlined">
+              save post
+            </Button> }
+            <Button onClick={ onViewComments } variant="outlined">
+              View comments
+            </Button>
+            <IconButton onClick={ onDeletePost } className={ classes.button } aria-label="delete">
+              <DeleteIcon/>
+            </IconButton>
+            <IconButton onClick={ onEditPost } className={ classes.button } aria-label="delete">
+              <EditIcon/>
+            </IconButton>
+          </div>
+          <div>
+            { isViewComments &&
             <div>
-              { isEditMode &&<Button onClick={ onUpdatePost } variant="outlined">
-                save post
-              </Button> }
-              <Button onClick={ onViewComments } variant="outlined">
-                View comments
-              </Button>
-              <IconButton onClick={ onDeletePost } className={ classes.button } aria-label="delete">
-                <DeleteIcon/>
-              </IconButton>
-              <IconButton onClick={ onEditPost } className={ classes.button } aria-label="delete">
-                <EditIcon/>
-              </IconButton>
+              <form className={ styles.form } onSubmit={ createComment }>
+                <input className={ styles.inputFormComment } onChange={ onChangeBodyComment } type="text"/>
+                <button className={ styles.btn }>add a comment</button>
+              </form>
+              <ul className={ styles.commentsList }>
+                {
+                  post.comments.map((comment) => {
+                    return (
+                        <li key={ comment.id }><Comment comment={ comment }/></li>
+                    )
+                  })
+                }
+              </ul>
             </div>
-            <div>
-              { isViewComments &&
-              <div>
-                <form onSubmit={ createComment }>
-                  <input className={styles.inputFormComment} onChange={ onChangeBodyComment } type="text"/>
-                  <button className={styles.btn}>add a comment</button>
-                </form>
-                <ul>
-                  {
-                    post.comments.map((comment) => {
-                      return (
-                          <li key={ comment.id }><Comment comment={ comment }/></li>
-                      )
-                    })
-                  }
-                </ul>
-              </div>
-              }
-            </div>
-          </CardActions>
+            }
+          </div>
+        </CardActions>
       </div>
   );
 }

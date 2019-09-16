@@ -10,10 +10,10 @@ import configureStore from './state/configureStore';
 const store = configureStore();
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={ store }>
       <ErrorBoundry>
         <Router>
-          <App />
+          <App/>
         </Router>
       </ErrorBoundry>
     </Provider>

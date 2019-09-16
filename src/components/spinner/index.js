@@ -1,14 +1,13 @@
 import React from 'react';
 
-import './spinner.css';
+import styles from './spinner.module.scss';
 
 const Spinner = () => {
   return (
-      <div className="loader_wrap">
-        <p className="loading">Loading...</p>
-        <div className="loader"> </div>
+      <div className={ styles.loader_wrap }>
+        <p className={ styles.loading }>Loading...</p>
+        <div className={ styles.loader }> </div>
       </div>
-
   );
 };
 

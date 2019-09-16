@@ -1,4 +1,3 @@
-
 const initialState = {
   data: [],
   loading: true,
@@ -85,7 +84,7 @@ const reducer = (state = initialState, action) => {
 
       /*
  * ---------------
- * Open 1 item and comment
+ * Open 1 itemPost and comments
  * ---------------
  * */
 
@@ -104,7 +103,6 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         data: action.payload
-        // data: state.data.filter(post => post.id === action.payload)
       };
     case 'FETCH_POST_FAILED':
       return {
@@ -130,11 +128,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         data: state.data.map((post) => {
-          if (Number(post.id) === Number(action.payload.postId)){
+          if (Number(post.id) === Number(action.payload.postId)) {
             return {
               ...post,
               comments: [
-                  ...post.comments,
+                ...post.comments,
                 action.payload
               ],
             }

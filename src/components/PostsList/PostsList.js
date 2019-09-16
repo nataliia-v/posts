@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { getAllPosts, getPostsError, getPostsIsLoading } from "../../state/posts/selectors";
 
-import './PostsList.css';
 import Spinner from "../spinner";
 import ErrorIndicator from "../error-indicator";
 import { delPost, fetchPosts, saveComment, updatePostThunk } from "../../state/posts/thunks";
@@ -25,7 +24,6 @@ const useStyles = makeStyles(() => ({
 const PostsList = ({ posts, onDelete, onUpdate, onCreateComment }) => {
   const classes = useStyles();
 
-  console.log(posts);
   return (
     <ul>
       {
@@ -42,7 +40,7 @@ const PostsList = ({ posts, onDelete, onUpdate, onCreateComment }) => {
 };
 
 function PostsListContainer(props) {
-  const {posts, loading, error, dispatch, history} = props;
+  const {posts, loading, error, dispatch} = props;
 
   useEffect(() => {
     dispatch(fetchPosts());

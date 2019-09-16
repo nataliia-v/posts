@@ -77,7 +77,7 @@ export const savePost = post => {
   };
 };
 
-export const updatePostThunk = ({ id, title, body }) => {
+export const updatePostThunk = ({id, title, body}) => {
 
   return async dispatch => {
     dispatch(startPostSaving());
@@ -113,9 +113,6 @@ export const delPost = id => {
 };
 
 export const saveComment = (postId, body) => {
-
-  console.log('postId', postId);
-
 
   return async dispatch => {
     dispatch(startCommentSaving());

@@ -1,26 +1,25 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { getPostsIsLoading, getPostById, } from "../../state/posts/selectors";
-import { delPost, updatePostThunk, fetchPostWithComments, saveComment } from '../../state/posts/thunks'
+import { delPost, updatePostThunk, saveComment } from '../../state/posts/thunks'
 import PostItem from "../PostItem/PostItem";
 import Spinner from "../spinner";
+
 import { makeStyles } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
+import { Link } from "react-router-dom";
+import Button from "@material-ui/core/Button";
 
 function PostPage({
-  match: { params: { postId } },
-  history,
-  post,
-  isLoadingPost,
-  dispatch,
-}) {
-  useEffect(() => {
-    dispatch(fetchPostWithComments(postId))
-  }, [postId]);
+                    history,
+                    post,
+                    isLoadingPost,
+                    dispatch,
+                  }) {
 
   const deletePost = id => {
     dispatch(
-      delPost(id)
+        delPost(id)
     );
 
     history.push('/posts');
@@ -28,7 +27,7 @@ function PostPage({
 
   const updatePost = (data) => {
     dispatch(
-      updatePostThunk(data)
+        updatePostThunk(data)
     )
   };
 
@@ -55,13 +54,20 @@ function PostPage({
   }
 
   if (!isLoadingPost && !post) return <div>Not Found - 404</div>;
+  const postUrl = `/posts`;
 
   return (
+      <div>
+        <Link to={ postUrl }>
+          <Button variant="outlined">
+            back
+          </Button>
+        </Link>
 
-      <Card className={classes.card} key={post.id}>
-        <PostItem post={post} onDelete={deletePost} onUpdate={updatePost} onCreateComment={createComment}/>
-      </Card>
-
+        <Card className={ classes.card } key={ post.id }>
+          <PostItem post={ post } onDelete={ deletePost } onUpdate={ updatePost } onCreateComment={ createComment }/>
+        </Card>
+      </div>
   );
 }
 

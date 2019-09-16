@@ -27,7 +27,7 @@ export const fetchPostsFailed = error => ({
 export const startPostSaving = () => ({
   type: "START_POST_SAVING"
 });
-export const stopPostSaving= () => ({
+export const stopPostSaving = () => ({
   type: "STOP_POST_SAVING"
 });
 export const savePostSuccess = post => ({
@@ -43,7 +43,6 @@ export const updatePostSuccess = post => ({
   payload: post,
 });
 
-
 /*
  * ---------------
  * Delete post
@@ -52,7 +51,7 @@ export const updatePostSuccess = post => ({
 export const startPostDel = () => ({
   type: "START_POST_DEL"
 });
-export const stopPostDel= () => ({
+export const stopPostDel = () => ({
   type: "STOP_POST_DEL"
 });
 export const delPostSuccess = postId => ({
@@ -66,7 +65,7 @@ export const delPostFailed = error => ({
 
 /*
 * ---------------
-* Opem 1 item and comment
+* Open 1 itemPost and comments
 * ---------------
 * */
 
